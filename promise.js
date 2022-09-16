@@ -10,14 +10,11 @@ const promiseOutput = async (emosi) => {
     const totalEmosiPenonton = groupPenonton.filter(
       (penonton) => penonton.hasil == emosi
     );
-    return console.log(totalEmosiPenonton.length);
+    return totalEmosiPenonton.length;
   } catch (error) {
     console.log("terjadi kesalahan", error);
   }
 };
-
-promiseOutput("marah");
-promiseOutput("tidak marah");
 
 module.exports = {
   promiseOutput,
